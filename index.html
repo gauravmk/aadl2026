@@ -16,6 +16,7 @@
     }
     .header {
       background-color: #D0E0FF;
+      border-bottom: 1px solid #9DBFFF;
     }
     .content {
       background-color: #fff;
@@ -25,16 +26,44 @@
 <body>
     <div class="flex justify-between items-center header">
         <div class="logo">
-            <img src="logo.png" alt="AADL 2026" style="height: 100px; margin-left: 12px; margin-top: 12px; margin-bottom: 12px;">
+            <img src="logo.png" alt="AADL 2026" style="height: 100px; margin-left: 48px; margin-top: 12px; margin-bottom: 12px;">
         </div>
     </div>
     <div class="content h-screen text-color main-font"> 
         <div class="flex mt-16 mx-12">
             <img class="w-1/3" src="Ann_Arbor_District_Library.jpg" alt="Ann Arbor Downtown Library" style="width: 50%; height: 500px; object-fit: cover">
-            <div class="px-12">
-                <h1 class="text-4xl text-slate-900">Hello friends and library patrons,</h1>
-                <div class="mt-8 text-lg text-slate-600">We are running for the Ann Arbor District Library Board to help continue the great work of our award-winning library.</div>
-                <div class="mt-8 text-lg text-slate-600">We believe in a library that is welcoming to all, connects our community, and remains an integral source of learning and curiosity.</div>
+            <div class="px-12 flex flex-col justify-between">
+                <div>
+                    <h1 class="text-4xl text-slate-900">Hello friends and library patrons,</h1>
+                    <div class="mt-8 text-lg text-slate-600">We are running for the Ann Arbor District Library Board to help continue the great work of our award-winning library.</div>
+                    <div class="mt-8 text-lg text-slate-600">We believe in a library that is welcoming to all, connects our community, and remains an integral source of learning and curiosity.</div>
+                </div>
+                <div>
+                    <div class="text-md text-slate-600">If you are interested in volunteering, or receiving updates from our campaign, you can add your email address below:</div>
+
+                    <form class="mt-6 sm:flex sm:max-w-md">
+                        <label htmlFor="email-address" class="sr-only">
+                          Email address
+                        </label>
+                        <input
+                          id="email-address"
+                          name="email-address"
+                          type="email"
+                          required
+                          placeholder="Enter your email"
+                          autoComplete="email"
+                          class="w-full min-w-0 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:w-64 sm:text-sm/6 xl:w-full"
+                        />
+                        <div class="mt-4 sm:mt-0 sm:ml-4 sm:shrink-0">
+                          <button
+                            type="submit"
+                            class="flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                          >
+                            Sign Up
+                          </button>
+                        </div>
+                      </form>
+                </div>
             </div>
         </div>
     </div>
