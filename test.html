@@ -1,0 +1,378 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ephesis&amp;family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap"
+    rel="stylesheet">
+  <meta property="og:title" content="AADL 2026" />
+  <meta property="og:description" content="AADL 2026" />
+  <meta property="og:url" content="https://aadl2026.com" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .main-font {
+      font-family: "Jost", sans-serif;
+    }
+
+    .header {
+      background-color: #D0E0FF;
+      border-bottom: 1px solid #9DBFFF;
+    }
+
+    .disabled {
+      opacity: 0.7 !important;
+    }
+
+    .placeholder {
+      background-color: #ccc;
+    }
+
+    .blue-bg {
+      background-color: #e6edfa;
+    }
+
+    .endorsement-placeholder {
+      background-color: #ccc;
+      border-radius: 100%;
+      min-width: 240px;
+      min-height: 240px;
+      width: 100%;
+      aspect-ratio: 1/1;
+    }
+
+    .endorsement-grid {
+      margin-top: 48px;
+      display: grid;
+      grid-gap: 60px;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+
+    .faq-answer {
+      margin-left: 24px;
+    }
+
+    .closed .faq-answer {
+      display: none;
+    }
+
+    .faq-question-icon {
+      font-size: 20px;
+      width: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .faq-question-icon::before {
+      content: "-"
+    }
+
+    .closed .faq-question-icon::before {
+      content: "+"
+    }
+
+    .help-divider {
+      height: 200px;
+      width: 1px;
+      background-color: #ccc;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const faqQuestions = document.getElementsByClassName("faq-question");
+      for (const question of faqQuestions) {
+        question.addEventListener("click", () => {
+          question.parentElement.classList.toggle("closed")
+        })
+      }
+
+      const volunteerForms = document.getElementsByClassName('volunteer-form');
+      for (const form of volunteerForms) {
+        const SubmitButton = form.getElementsByClassName("submit")[0]
+        SubmitButton.addEventListener("click", () => {
+          SubmitButton.classList.add('disabled')
+          SubmitButton.innerText = "Signing up..."
+
+          fetch('https://script.google.com/macros/s/AKfycbx_pcldQIFv_cIAuk5TVKTRKkPMRO2VxpEQ5Kx_7wbnILibIkhizamHh6YUN7WPh6Qq/exec', {
+            method: 'POST',
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: new URLSearchParams({ Email: Email.value }),
+          }).then(() => {
+            form.getElementsByClassName("volunteer-input")[0].classList.add("hidden")
+            form.getElementsByClassName("volunteer-confirmation")[0].classList.remove("hidden")
+          });
+        })
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <div class="flex justify-between items-center header">
+    <div class="logo">
+      <img src="logo.png" alt="AADL 2026"
+        style="height: 100px; margin-left: 48px; margin-top: 12px; margin-bottom: 12px;">
+    </div>
+    <nav class="flex mr-24 gap-8 items-center">
+      <a class="text-gray-700 hover:text-gray-900" href="#about">About</a>
+      <a class="text-gray-700 hover:text-gray-900" href="#endorsements">Endorsements</a>
+      <a class="text-gray-700 hover:text-gray-900" href="#faq">FAQ</a>
+      <a class="text-gray-700 hover:text-gray-900" href="#help">Help the Campaign</a>
+      <a href="https://www.actblue.com/test"
+        class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Donate</a>
+    </nav>
+  </div>
+  <content class="h-screen text-color main-font">
+
+    <!-- Overview Section -->
+    <div class="flex mt-8 md:mt-16 mx-12 flex-wrap pb-24 overview">
+      <img class="w-full h-60 md:w-2/5 md:h-120" src="Ann_Arbor_District_Library.jpg" alt="Ann Arbor Downtown Library"
+        style="object-fit: cover">
+      <div class="w-full md:w-3/5 mt-8 md:mt-0 md:px-12 flex flex-col justify-between">
+        <div>
+          <h1 class="text-4xl text-slate-900">Hello friends and dear library patrons,</h1>
+          <div class="mt-8 text-lg text-slate-600">We are running for the Ann Arbor District Library Board to help
+            continue the great work of our award-winning library.</div>
+          <div class="mt-8 text-lg text-slate-600">We take pride in our library that connects our community, welcomes
+            everyone, and serves as a vital source of learning and curiosity.</div>
+        </div>
+        <div class="mt-8 md:mt-0">
+          <div class="text-md text-slate-600 mb-6">If you are interested in volunteering, add your email address below:
+          </div>
+          <div class="volunteer-form">
+            <div class="volunteer-confirmation text-slate-600 hidden">Thank you for signing up to be a volunteer!</div>
+            <div class="volunteer-input sm:flex sm:max-w-md">
+              <input id="email" name="Email" type="email" required placeholder="Enter your email" autoComplete="email"
+                class="w-full min-w-0 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:w-64 sm:text-sm/6 xl:w-full" />
+              <div class="mt-4 sm:mt-0 sm:ml-4 sm:shrink-0">
+                <button
+                  class="submit flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="flex px-12 flex-wrap pb-24 blue-bg">
+      <h2 class="text-6xl my-16">About Us</h2>
+      <!-- Cassie Haynes -->
+      <div class="flex gap-8">
+        <div class="w-fit">
+          <div class="placeholder w-120 h-80"></div>
+        </div>
+        <div>
+          <h4 class="text-2xl mb-8 font-semibold">Cassie Haynes</h4>
+          <p class="text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum dictum diam nec semper. Proin pretium
+            dictum consectetur. Mauris sagittis interdum odio, a facilisis ex condimentum non. Aliquam erat volutpat.
+            Proin finibus pulvinar dui vitae egestas. Integer sed sem congue, elementum tortor at, tincidunt dui. Cras
+            ut justo at nisl ornare varius. Nunc a pretium nisi. In ullamcorper urna non lacus luctus faucibus. Cras
+            tincidunt, erat vel laoreet finibus, augue purus posuere metus, a luctus augue ante id dui. Integer ligula
+            ante, varius ut pulvinar ut, pellentesque non sapien. Quisque bibendum eleifend nisl, non vestibulum est
+            rutrum vel.
+          </p>
+        </div>
+      </div>
+
+      <!-- Rachel Goldberg -->
+      <div class="flex gap-8 mt-24">
+        <div>
+          <h4 class="text-2xl mb-8 font-semibold">Rachel Goldberg</h4>
+          <p class="text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum dictum diam nec semper. Proin pretium
+            dictum consectetur. Mauris sagittis interdum odio, a facilisis ex condimentum non. Aliquam erat volutpat.
+            Proin finibus pulvinar dui vitae egestas. Integer sed sem congue, elementum tortor at, tincidunt dui. Cras
+            ut justo at nisl ornare varius. Nunc a pretium nisi. In ullamcorper urna non lacus luctus faucibus. Cras
+            tincidunt, erat vel laoreet finibus, augue purus posuere metus, a luctus augue ante id dui.
+          </p>
+        </div>
+        <div class="w-fit">
+          <div class="placeholder w-120 h-80"></div>
+        </div>
+      </div>
+
+      <!-- Gaurav Kulkarni -->
+      <div class="flex gap-8 mt-24">
+        <div class="w-fit">
+          <div class="placeholder w-120 h-80"></div>
+        </div>
+        <div>
+          <h4 class="text-2xl mb-8 font-semibold">Gaurav Kulkarni</h4>
+          <p class="text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum dictum diam nec semper. Proin pretium
+            dictum consectetur. Mauris sagittis interdum odio, a facilisis ex condimentum non. Aliquam erat volutpat.
+            Proin finibus pulvinar dui vitae egestas. Integer sed sem congue, elementum tortor at, tincidunt dui. Cras
+            ut justo at nisl ornare varius. Nunc a pretium nisi. In ullamcorper urna non lacus luctus faucibus. Cras
+            tincidunt, erat vel laoreet finibus, augue purus posuere metus, a luctus augue ante id dui. Integer ligula
+            ante, varius ut pulvinar ut, pellentesque non sapien. Quisque bibendum eleifend nisl, non vestibulum est
+            rutrum vel.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Endorsements Section -->
+    <div id="endorsements" class="md:pt-16 px-12 pb-24">
+      <h2 class="text-6xl">Endorsements</h2>
+      <h4 class="text-lg text-gray-500">We are so grateful for the votes of confidence from these Ann Arbor leaders.
+
+        <div class="endorsement-grid">
+          <div class="flex flex-col flex-grow items-center justify-center">
+            <div class="endorsement-placeholder"></div>
+            <p class="text-2xl mt-4">Person A</p>
+            <p class="text-lg text-gray-500">Affiliation</p>
+          </div>
+
+          <div class="flex flex-col flex-grow items-center justify-center">
+            <div class="endorsement-placeholder"></div>
+            <p class="text-2xl mt-4">Person B</p>
+            <p class="text-lg text-gray-500">Affiliation</p>
+          </div>
+
+          <div class="flex flex-col flex-grow items-center justify-center">
+            <div class="endorsement-placeholder"></div>
+            <p class="text-2xl mt-4">Person C</p>
+            <p class="text-lg text-gray-500">Affiliation</p>
+          </div>
+
+          <div class="flex flex-col flex-grow items-center justify-center">
+            <div class="endorsement-placeholder"></div>
+            <p class="text-2xl mt-4">Person D</p>
+            <p class="text-lg text-gray-500">Affiliation</p>
+          </div>
+
+
+          <div class="flex flex-col flex-grow items-center justify-center">
+            <div class="endorsement-placeholder"></div>
+            <p class="text-2xl mt-4">Person E</p>
+            <p class="text-lg text-gray-500">Affiliation</p>
+          </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div id="faq" class="px-12 pb-12 blue-bg">
+      <h2 class="text-6xl py-16">FAQ</h2>
+
+      <div class="mb-8">
+        <div class="flex gap-2 items-center cursor-pointer faq-question">
+          <div class="faq-question-icon"></div>
+          <div class="text-2xl">What are your top priorities for AADL in the coming years?</div>
+        </div>
+        <div class="faq-answer">
+          <p class="text-red-700 text-lg pt-4">Cassie: My thoughts here</p>
+          <p class="text-blue-700 text-lg pt-4">Rachel: My thoughts here</p>
+          <p class="text-green-700 text-lg pt-4">Gaurav: My thoughts here</p>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <div class="flex gap-2 items-center cursor-pointer faq-question">
+          <div class="faq-question-icon"></div>
+          <div class="text-2xl">More broadly, what role do you think libraries play in our community?</div>
+        </div>
+        <div class="faq-answer">
+          <p class="text-lg mt-4">Our thoughts here</p>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <div class="flex gap-2 items-center cursor-pointer faq-question">
+          <div class="faq-question-icon"></div>
+          <div class="text-2xl">What are your thoughts on the construction of a new Downtown Library?</div>
+        </div>
+        <div class="faq-answer">
+          <p class="text-lg mt-4">Our thoughts here</p>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <div class="flex gap-2 items-center cursor-pointer faq-question">
+          <div class="faq-question-icon"></div>
+          <div class="text-2xl">What is a library service you think more people should be aware of?</div>
+        </div>
+        <div class="faq-answer">
+          <p class="text-lg mt-4">Our thoughts here</p>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <div class="flex gap-2 items-center cursor-pointer faq-question">
+          <div class="faq-question-icon"></div>
+          <div class="text-2xl">What are your thoughts on the library's possible acquisition of The Observer?</div>
+        </div>
+        <div class="faq-answer">
+          <p class="text-lg mt-4">Our thoughts here</p>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <div class="flex gap-2 items-center cursor-pointer faq-question">
+          <div class="faq-question-icon"></div>
+          <div class="text-2xl">What has been your favorite Summer Game badge?</div>
+        </div>
+        <div class="faq-answer">
+          <p class="text-lg mt-4">Our thoughts here</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Section -->
+    <div id="help" class="px-12 pb-48">
+      <h2 class="text-6xl pt-16">Support our campaign</h2>
+      <h4 class="text-lg text-gray-500 mt-4">Here are a few ways that we could use your help.</h4>
+      <div class="flex items-center justify-between mt-8 max-w-2xl">
+        <!-- Volunteer -->
+        <div>
+          <div>
+            <h4 class="text-2xl mb-4">Sign up to volunteer</h4>
+          </div>
+          <div class="mt-8 md:mt-0">
+            <div class="volunteer-form">
+              <div class="volunteer-confirmation text-slate-600 hidden">Thank you for signing up to be a volunteer!
+              </div>
+              <div class="volunteer-input sm:flex sm:max-w-md">
+                <input id="email" name="Email" type="email" required placeholder="Enter your email" autoComplete="email"
+                  class="w-full min-w-0 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:w-64 sm:text-sm/6 xl:w-full" />
+                <div class="mt-4 sm:mt-0 sm:ml-4 sm:shrink-0">
+                  <button
+                    class="submit flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    Sign Up
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="help-divider"></div>
+
+        <!-- Donate -->
+        <div class="flex flex-col items-center">
+          <div>
+            <h4 class="text-2xl mb-4">Donate to our campaign</h4>
+          </div>
+          <a href="https://www.actblue.com/test"
+            class="rounded-md bg-indigo-600 px-8 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Donate</a>
+        </div>
+      </div>
+    </div>
+  </content>
+</body>
+
+</html>
