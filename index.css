@@ -149,16 +149,16 @@ nav {
 
   .faq-question-icon {
     font-size: 20px;
-    width: 16px;
+    min-width: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .faq-question-icon::before {
-    content: "-"
+    content: "-";
   }
 
   .closed .faq-question-icon::before {
-    content: "+"
+    content: "+";
   }

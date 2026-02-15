@@ -1,230 +1,320 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Ephesis&amp;family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
-    <meta property="og:title" content="AADL 2026" />
-    <meta property="og:description" content="AADL 2026" />
-    <meta property="og:url" content="https://aadl2026.com" />
+  <meta charset="UTF-8" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ephesis&amp;family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
+  <meta property="og:title" content="AADL 2026" />
+  <meta property="og:description" content="AADL 2026" />
+  <meta property="og:url" content="https://aadl2026.com" />
 </head>
 
 <body>
-    <content class="h-screen text-color main-font relative">
 
-        <!-- Hero Section -->
+  <!-- Hello to anyone reading the source code! -->
 
-        <div class="hero relative">
-            <img class="hero-image" src="images/group-photo.jpg" alt="Candidates Gaurav Kulkarni, Rachel Goldberg and Cassie Haynes, wearing AADL Summer Game shirts and sitting in the childrens section of the downtown library." />
-            <div class="header-gradient-white absolute top-0"></div>
-            <div class="hero-gradient-black absolute bottom-0"></div>
+  <content class="h-screen text-color main-font relative">
 
-            <div class="logo"></div>
+    <!-- Hero Section -->
 
-            <div id="hamburger" class="fixed right-2 top-2 md:hidden z-1001 bg-white p-2 rounded-full">
-                <img width="20px" height="20px" src="images/hamburger.png" />
-            </div>
-            <nav id="nav-menu">
-                <a class="font-semibold text-lg text-gray-700 hover:text-gray-900" href="#about">About</a>
-                <a class="font-semibold text-lg text-gray-700 hover:text-gray-900" href="#endorsements">Endorsements</a>
-                <a class="font-semibold text-lg text-gray-700 hover:text-gray-900" href="#faq">FAQ</a>
-                <a href="https://www.actblue.com/test" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-md font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                    Donate
-                </a>
-            </nav>
+    <div class="hero relative">
+      <img class="hero-image" src="images/group-photo.jpg"
+        alt="Candidates Gaurav Kulkarni, Rachel Goldberg and Cassie Haynes, wearing AADL Summer Game shirts and sitting in the childrens section of the downtown library." />
+      <div class="header-gradient-white absolute top-0"></div>
+      <div class="hero-gradient-black absolute bottom-0"></div>
 
-            <div class="hero-text text-white ml-16 mr-48 hidden lg:block">
-                <div class="text-8xl max-[1300px]:text-6xl">Libraries are for everyone</div>
-                <div class="text-2xl max-[1300px]:text-xl mt-4 font-light italic">
-                    <p><span class="font-semibold">We are running for the Ann Arbor District Library Board</span> to support our library that has continually supported us.<span class="hidden md:block"> Our library is at the heart of Ann Arbor. AADL provides not just books, but public space that is truly open to all, and events that connect us to our neighbors and community.</span></p>
-                </div>
-            </div>
-            <div class="photo-credit text-white italic text-xs md:text-sm">Photo by Dieu-Nalio Chéry</div>
+      <div class="logo"></div>
+
+      <div id="hamburger" class="fixed right-2 top-2 md:hidden z-1001 bg-white p-2 rounded-full">
+        <img width="20px" height="20px" src="images/hamburger.png" />
+      </div>
+      <nav id="nav-menu">
+        <a class="font-semibold text-lg text-gray-700 hover:text-gray-900" href="#about">About</a>
+        <a class="font-semibold text-lg text-gray-700 hover:text-gray-900" href="#endorsements">Endorsements</a>
+        <a class="font-semibold text-lg text-gray-700 hover:text-gray-900" href="#faq">FAQ</a>
+        <a class="font-semibold text-lg text-gray-700 hover:text-gray-900" href="#get-involved">Get Involved</a>
+        <a target="_blank" href="https://www.actblue.com/test"
+          class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-md font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          Donate
+        </a>
+      </nav>
+
+      <div class="hero-text text-white ml-16 mr-48 hidden lg:block">
+        <div class="text-8xl max-[1300px]:text-6xl">Libraries are for everyone</div>
+        <div class="text-2xl max-[1300px]:text-xl mt-4 font-light italic">
+          <p><span class="font-semibold">We are running for the Ann Arbor District Library Board</span> to support our
+            library that has continually supported us.<span class="hidden md:block"> Our library is at the heart of Ann
+              Arbor. AADL provides not just books, but public space that is truly open to all, and events that connect
+              us to our neighbors and community.</span></p>
         </div>
+      </div>
+      <div class="photo-credit text-white italic text-xs md:text-sm">Photos by Dieu-Nalio Chéry</div>
+    </div>
 
-        <!-- Main Section -->
-        <div class="content-section pb-12">
-            <h1 class="text-4xl text-slate-900 my-6 md:my-12">Hello friends and dear library patrons,</h1>
-            <div class="mt-8 text-lg text-gray-500">
-                <p>We are <span class="text-black">Cassie Haynes</span>, <span class="text-black">Rachel Goldberg</span> and <span class="text-black">Gaurav Kulkarni</span>, running to serve as your library trustees.</p>
-                <p class="mt-4 block lg:hidden">Our library is at the heart of Ann Arbor. AADL provides not just books, but public space that is truly open to all, and events that connect us to our neighbors and community.</p>
-                <p class="mt-4">Learn more about us below, and support us by donating or volunteering.</p>
-            </div>
-            <div class="mt-8 flex gap-6 mx-auto text-xl">
-                <a href="https://www.actblue.com/test" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-md font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                    Sign up to Volunteer
-                </a>
-                <a href="https://www.actblue.com/test" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-md font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                    Donate
-                </a>
-            </div>
-        </div>
+    <!-- Main Section -->
+    <div class="content-section pb-12">
+      <h1 class="text-4xl text-slate-900 my-6 md:mt-12">Hello friends and dear library patrons,</h1>
+      <div class="mt-8 text-lg text-gray-500">
+        <p>We are <span class="text-black">Cassie Haynes</span>, <span class="text-black">Rachel Goldberg</span> and
+          <span class="text-black">Gaurav Kulkarni</span>, running to serve as your library trustees.
+        </p>
+        <p class="mt-4 block lg:hidden">Our library is at the heart of Ann Arbor. AADL provides not just books, but
+          public space that is truly open to all, and events that connect us to our neighbors and community.</p>
+        <p class="mt-4">Learn more about us below, and support us by volunteering or donating.</p>
+      </div>
+      <div class="mt-8 flex gap-6 mx-auto text-xl">
+        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdYJkARn90r_QXPxlcER8mpA7H3VPbO30__WstiF2yK_bO9TQ/viewform?usp=dialog"
+          class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-md font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          Sign up to Volunteer
+        </a>
+        <a target="_blank" href="https://www.actblue.com/test"
+          class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-md font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          Donate
+        </a>
+      </div>
+    </div>
 
 
-        <!-- About Us Section -->
+    <!-- About Us Section -->
 
-        <div class="blue-bg">
-        <div id="about" class="content-section flex flex-wrap pb-24">
-            <h2 class="text-6xl my-16">About Us</h2>
-            <!-- Cassie Haynes -->
-            <div class="flex gap-8">
-              <img class="about-photo hidden md:block" src="images/cassie.jpg" />
-              <div>
-                <h4 class="text-2xl mb-4 font-semibold">Cassie Haynes</h4>
-                <img class="about-photo block md:hidden" src="images/cassie.jpg" />
-                <p class="text-lg mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum dictum diam nec semper. Proin pretium
-                  dictum consectetur. Mauris sagittis interdum odio, a facilisis ex condimentum non. Aliquam erat volutpat.
-                  Proin finibus pulvinar dui vitae egestas. Integer sed sem congue, elementum tortor at, tincidunt dui. Cras
-                  ut justo at nisl ornare varius. Nunc a pretium nisi. In ullamcorper urna non lacus luctus faucibus. Cras
-                  tincidunt, erat vel laoreet finibus, augue purus posuere metus, a luctus augue ante id dui. Integer ligula
-                  ante, varius ut pulvinar ut, pellentesque non sapien. Quisque bibendum eleifend nisl, non vestibulum est
-                  rutrum vel.
-                </p>
-              </div>
-            </div>
-      
-            <!-- Rachel Goldberg -->
-            <div class="flex gap-8 mt-16">
-              <div>
-                <h4 class="text-2xl mb-4 font-semibold">Rachel Goldberg</h4>
-                <img class="about-photo block md:hidden" src="images/rachel.jpg" />
-                <p class="text-lg mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum dictum diam nec semper. Proin pretium
-                  dictum consectetur. Mauris sagittis interdum odio, a facilisis ex condimentum non. Aliquam erat volutpat.
-                  Proin finibus pulvinar dui vitae egestas. Integer sed sem congue, elementum tortor at, tincidunt dui. Cras
-                  ut justo at nisl ornare varius. Nunc a pretium nisi. In ullamcorper urna non lacus luctus faucibus. Cras
-                  tincidunt, erat vel laoreet finibus, augue purus posuere metus, a luctus augue ante id dui.
-                </p>
-              </div>
-              <img class="about-photo hidden md:block" src="images/rachel.jpg" />
-            </div>
-      
-            <!-- Gaurav Kulkarni -->
-            <div class="flex gap-8 mt-16">
-              <img class="about-photo hidden md:block" src="images/gaurav.jpg" />
-              <div>
-                <h4 class="text-2xl mb-4 font-semibold">Gaurav Kulkarni</h4>
-                <img class="about-photo block md:hidden" src="images/gaurav.jpg" />
-                <p class="text-lg mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum dictum diam nec semper. Proin pretium
-                  dictum consectetur. Mauris sagittis interdum odio, a facilisis ex condimentum non. Aliquam erat volutpat.
-                  Proin finibus pulvinar dui vitae egestas. Integer sed sem congue, elementum tortor at, tincidunt dui. Cras
-                  ut justo at nisl ornare varius. Nunc a pretium nisi. In ullamcorper urna non lacus luctus faucibus. Cras
-                  tincidunt, erat vel laoreet finibus, augue purus posuere metus, a luctus augue ante id dui. Integer ligula
-                  ante, varius ut pulvinar ut, pellentesque non sapien. Quisque bibendum eleifend nisl, non vestibulum est
-                  rutrum vel.
-                </p>
-              </div>
-            </div>
+    <div class="blue-bg">
+      <div id="about" class="content-section flex flex-wrap pb-18">
+        <h2 class="text-6xl mt-16 mb-8">About Us</h2>
+        <!-- Cassie Haynes -->
+        <div class="flex gap-8">
+          <img class="about-photo hidden md:block" src="images/cassie.jpg" />
+          <div>
+            <h4 class="text-3xl mb-4 font-semibold">Cassie Haynes</h4>
+            <img class="about-photo block md:hidden" src="images/cassie.jpg" />
+            <p class="text-lg mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum dictum diam nec semper. Proin
+              pretium
+              dictum consectetur. Mauris sagittis interdum odio, a facilisis ex condimentum non. Aliquam erat volutpat.
+              Proin finibus pulvinar dui vitae egestas. Integer sed sem congue, elementum tortor at, tincidunt dui. Cras
+              ut justo at nisl ornare varius. Nunc a pretium nisi. In ullamcorper urna non lacus luctus faucibus. Cras
+              tincidunt, erat vel laoreet finibus, augue purus posuere metus, a luctus augue ante id dui. Integer ligula
+              ante, varius ut pulvinar ut, pellentesque non sapien. Quisque bibendum eleifend nisl, non vestibulum est
+              rutrum vel.
+            </p>
           </div>
         </div>
-        </div>
 
-        <!-- Endorsements Section -->
-
-        <div id="endorsements" class="content-section pt-16 pb-24">
-            <h2 class="text-6xl">Endorsements</h2>
-            <h4 class="text-lg text-gray-500">We are so grateful for the votes of confidence from these Ann Arbor leaders.</h4>
-              <div class="endorsement-grid">
-                <div class="flex flex-col flex-grow items-center justify-center">
-                  <img class="endorsement-photo" src="images/aidan.jpg" />
-                  <p class="text-2xl mt-4 text-center">Aidan Sova</p>
-                  <p class="text-lg text-gray-500">AADL Trustee</p>
-                </div>
-
-                <div class="flex flex-col flex-grow items-center justify-center">
-                    <div class="endorsement-photo"></div>
-                    <p class="text-2xl mt-4 text-center">Molly Kleinman</p>
-                    <p class="text-lg text-gray-500">AADL Trustee</p>
-                </div>
-
-                <div class="flex flex-col flex-grow items-center justify-center">
-                  <div class="endorsement-photo"></div>
-                  <p class="text-2xl mt-4 text-center">Scott Trudeau</p>
-                  <p class="text-lg text-gray-500">AADL Trustee</p>
-                </div>
-              </div>
+        <!-- Rachel Goldberg -->
+        <div class="flex gap-8 mt-16">
+          <div>
+            <h4 class="text-3xl mb-4 font-semibold">Rachel Goldberg</h4>
+            <img class="about-photo block md:hidden" src="images/rachel.jpg" />
+            <p class="text-lg mt-4">
+              Rachel is an Ann Arbor educator, librarian, and active volunteer in the community. She is a local school
+              librarian, chair of the elementary library department in the school district, and teachers’ union
+              representative. She has worked in a variety of school settings and held various positions, including
+              classroom teacher, librarian, summer and afterschool programs director, and interim head of school, among
+              others. She feels most at ease when she is outside, surrounded by trees, or in a library, surrounded by
+              people she loves, books she aspires to read, and hot coffee (kept away from the books, of course). She is
+              also involved in the Jewish community, serving as an educator and volunteer with local organizations. In
+              free time that she works very hard to carve out, she enjoys running on the Border to Border trail with her
+              husband, Michael, as they try to keep up with their daughter, Margo (usually with limited success).
+            </p>
           </div>
-
-        <!-- FAQ Section -->
-
-        <div class="blue-bg">
-        <div id="faq" class="content-section pt-16 pb-24">
-            <h2 class="text-6xl">Frequently Asked Questions</h2>
-
-            <div class="my-8">
-              <div class="flex gap-2 items-start cursor-pointer faq-question">
-                <div class="faq-question-icon"></div>
-                <div class="text-2xl">What are your top priorities for AADL in the coming years?</div>
-              </div>
-              <div class="faq-answer">
-                <p class="text-red-700 text-lg pt-4">Cassie: My thoughts here</p>
-                <p class="text-blue-700 text-lg pt-4">Rachel: My thoughts here</p>
-                <p class="text-green-700 text-lg pt-4">Gaurav: My thoughts here</p>
-              </div>
-            </div>
-      
-            <div class="mb-8">
-              <div class="flex gap-2 items-start cursor-pointer faq-question">
-                <div class="faq-question-icon"></div>
-                <div class="text-2xl">More broadly, what role do you think libraries play in our community?</div>
-              </div>
-              <div class="faq-answer">
-                <p class="text-lg mt-4">Our thoughts here</p>
-              </div>
-            </div>
-      
-            <div class="mb-8">
-              <div class="flex gap-2 items-start cursor-pointer faq-question">
-                <div class="faq-question-icon"></div>
-                <div class="text-2xl">What are your thoughts on the construction of a new Downtown Library?</div>
-              </div>
-              <div class="faq-answer">
-                <p class="text-lg mt-4">Our thoughts here</p>
-              </div>
-            </div>
-      
-            <div class="mb-8">
-              <div class="flex gap-2 items-start cursor-pointer faq-question">
-                <div class="faq-question-icon"></div>
-                <div class="text-2xl">What is a library service you think more people should be aware of?</div>
-              </div>
-              <div class="faq-answer">
-                <p class="text-lg mt-4">Our thoughts here</p>
-              </div>
-            </div>
-      
-            <div class="mb-8">
-              <div class="flex gap-2 items-start cursor-pointer faq-question">
-                <div class="faq-question-icon"></div>
-                <div class="text-2xl">What are your thoughts on the library's possible acquisition of The Observer?</div>
-              </div>
-              <div class="faq-answer">
-                <p class="text-lg mt-4">Our thoughts here</p>
-              </div>
-            </div>
-      
-            <div class="mb-8">
-              <div class="flex gap-2 items-start cursor-pointer faq-question">
-                <div class="faq-question-icon"></div>
-                <div class="text-2xl">What has been your favorite Summer Game badge?</div>
-              </div>
-              <div class="faq-answer">
-                <p class="text-lg mt-4">Our thoughts here</p>
-              </div>
-            </div>
-        </div>
+          <img class="about-photo hidden md:block" src="images/rachel.jpg" />
         </div>
 
-    </content>
+        <!-- Gaurav Kulkarni -->
+        <div class="flex gap-8 mt-16">
+          <img class="about-photo hidden md:block" src="images/gaurav.jpg" />
+          <div>
+            <h4 class="text-3xl mb-4 font-semibold">Gaurav Kulkarni</h4>
+            <img class="about-photo block md:hidden" src="images/gaurav.jpg" />
+            <p class="text-lg mt-4">
+              Gaurav grew up with the Ann Arbor District Library, back in a time before the Summer Game. Attending video
+              game tournaments at the Downtown Branch opened his mind to all that a library can be. Beyond having access
+              to all the books you could imagine, he’s relied on libraries to borrow tools in times of need, print
+              crosswords and super search puzzles, research local Ann Arbor history, and even <a
+                class="text-blue-700 underline" target="_blank"
+                href="https://www.mlive.com/life/2025/07/u-m-graduates-find-love-through-ann-arbor-librarys-summer-games.html">plan
+                his first dates with
+                his now wife</a>, as they ran around museums and parks in search of Summer Game codes.
+
+              Gaurav is a software engineer and a housing and transit advocate. He believes firmly that housing is a
+              human right, and that communities are stronger when they lean on public services like libraries and public
+              transit. He encourages everyone to give the bus a try, and will gladly help or even ride with anyone who
+              feels overwhelmed with figuring out the bus and its schedule.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Endorsements Section -->
+
+    <div id="endorsements" class="content-section pt-16 pb-24">
+      <h2 class="text-6xl">Endorsements</h2>
+      <h4 class="text-lg text-gray-500">We are so grateful for the votes of confidence from these Ann Arbor leaders.
+      </h4>
+      <div class="endorsement-grid">
+        <div class="flex flex-col flex-grow items-center justify-center">
+          <img class="endorsement-photo" src="images/aidan.jpg" />
+          <p class="text-2xl mt-4 text-center">Aidan Sova</p>
+          <p class="text-lg text-gray-500 text-center">AADL Board President</p>
+        </div>
+
+        <div class="flex flex-col flex-grow items-center justify-center">
+          <div class="endorsement-photo"></div>
+          <p class="text-2xl mt-4 text-center">Molly Kleinman</p>
+          <p class="text-lg text-gray-500 text-center">AADL Board Secretary</p>
+        </div>
+
+        <div class="flex flex-col flex-grow items-center justify-center">
+          <div class="endorsement-photo"></div>
+          <p class="text-2xl mt-4 text-center">Scott Trudeau</p>
+          <p class="text-lg text-gray-500 text-center">AADL Trustee</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+
+    <div class="blue-bg">
+      <div id="faq" class="content-section py-16">
+        <h2 class="text-6xl">Frequently Asked Questions</h2>
+
+        <div class="mt-16 mb-8">
+          <div class="flex gap-2 items-start cursor-pointer faq-question">
+            <div class="faq-question-icon"></div>
+            <div class="text-4xl">What are your top priorities for AADL in the coming years?</div>
+          </div>
+          <div class="faq-answer">
+            <p class="text-lg pt-4">Our thoughts here</p>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <div class="flex gap-2 items-start cursor-pointer faq-question">
+            <div class="faq-question-icon"></div>
+            <div class="text-4xl">More broadly, what role do you think libraries play in our community?</div>
+          </div>
+          <div class="faq-answer">
+            <p class="text-lg mt-4">Our thoughts here</p>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <div class="flex gap-2 items-start cursor-pointer faq-question">
+            <div class="faq-question-icon"></div>
+            <div class="text-4xl">What are your thoughts on the construction of a new Downtown Library?</div>
+          </div>
+          <div class="faq-answer">
+            <p class="text-lg mt-4">We are elated about the new Downtown branch and take seriously the Board’s
+              responsibility to steward this next phase of development. We are particularly excited about the potential
+              for increased and varied opportunities for community programs, partnerships, housing, and access to
+              resources.</p>
+            <p class="text-lg mt-4">The new Downtown branch could be an iconic downtown landmark, in much the same way
+              that the Austin, Boston and Cleveland public libraries are destinations. Ann Arbor deserves a downtown
+              library that evokes awe.</p>
+            <p class="text-lg mt-4">A larger library allows our incredibly popular events and expos to grow and
+              accommodate all who want to attend. A larger library allows us to have a variety of spaces downtown, from
+              conference rooms, to study spaces, to theater space, that are truly open to all. This would be
+              transformational for our city because it would facilitate even more opportunities for groups and
+              individuals to connect with one another and with the broader community.</p>
+            <p class="text-lg mt-4">The new building will also create housing opportunities for diverse residents. In
+              the midst of a housing shortage and an affordability crisis, we need to build more housing. This is a
+              unique opportunity to provide homes immediately above the library (which would be the <span class="italic">dream</span>) and across the street from
+              the Blake Transit Center, one of the most active transit hubs in Michigan. We also know that mixed income
+              housing benefits all residents, and are excited by the idea of a mix of affordable, senior, artist, and
+              market-rate housing.</p>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <div class="flex gap-2 items-start cursor-pointer faq-question">
+            <div class="faq-question-icon"></div>
+            <div class="text-4xl">What is a library service you think more people should be aware of?</div>
+          </div>
+          <div class="faq-answer">
+            <p class="text-lg mt-4">
+              <span class="font-semibold">Rachel:</span> Shelf service. Having a personal shopper librarian pick out
+              items just for you is AMAZING. And don’t forget a side of extra cool ranch! Curious? Check out <a
+                class="text-blue-700 underline" target="_blank"
+                href="https://aadl.org/shelfservice">aadl.org/shelfservice</a>.
+            </p>
+            <p class="text-lg mt-4">
+              <span class="font-semibold">Gaurav:</span> The Living Oral History Project. In partnership with the
+              African American Cultural & Historical Museum, this is a treasure trove of information. It's a
+              set of interviews with African American residents who share their own personal experiences
+              growing up and living in Ann Arbor, along with historical photos and old news
+              articles to give an even fuller picture. I have learned so much about our towns history through this
+              project. Visit <a class="text-blue-700 underline" target="_blank"
+                href="https://aadl.org/aachmvideos">aadl.org/aachmvideos</a> to learn more!
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <div class="flex gap-2 items-start cursor-pointer faq-question">
+            <div class="faq-question-icon"></div>
+            <div class="text-4xl">What are your thoughts on the library's possible acquisition of The Observer?</div>
+          </div>
+          <div class="faq-answer">
+            <p class="text-lg mt-4">We are thrilled about the potential for future partnership between the Ann Arbor
+              Observer and AADL, as the idea of the library as a steward for this trusted local resource is one that
+              will benefit both institutions as well as local readers, both in the present and into the future.</p>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <div class="flex gap-2 items-start cursor-pointer faq-question">
+            <div class="faq-question-icon"></div>
+            <div class="text-4xl">What has been your favorite Summer Game badge?</div>
+          </div>
+          <div class="faq-answer">
+            <p class="text-lg mt-4">
+              <span class="font-semibold">Rachel:</span> I think my daughter learned to type by entering home codes that
+              she’d written down in her little notebook, so I have a sentimental attachment to home code neighborhood
+              walks and bike rides. I know that’s not a badge, but it’s still my favorite.
+            </p>
+
+            <p class="text-lg mt-4">
+              <span class="font-semibold">Gaurav:</span> I love that little chicken who visits places all over town.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Get Involved Section -->
+    <div id="get-involved" class="content-section py-16">
+      <h2 class="text-6xl">Get Involved</h2>
+      <h4 class="text-lg mt-6">If you're excited about this campaign, there are a few ways you can get
+        involved!
+      </h4>
+      <div class="mt-8 flex gap-6 mx-auto text-xl">
+        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdYJkARn90r_QXPxlcER8mpA7H3VPbO30__WstiF2yK_bO9TQ/viewform?usp=dialog"
+          class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-xl font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          Sign up to Volunteer
+        </a>
+        <a target="_blank" href="https://www.actblue.com/test"
+          class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-xl font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          Donate
+        </a>
+      </div>
+      <div class="mt-8 text-gray-500">
+        P.S. Thank you for being an active member of our community. Ann Arbor is what it is, in part, because of you.
+        And because of the impact you have on the people around you. We're grateful you're here, and we'll see you at
+        the library!
+      </div>
+    </div>
+  </content>
+  <footer class="text-center main-font mb-4 text-gray-500 text-sm">
+    Built with ❤️ in Ann Arbor | Paid for by [insert our committee name here]
+  </footer>
 </body>
 
 </html>
