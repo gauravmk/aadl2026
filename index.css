@@ -104,7 +104,8 @@ nav {
     object-position: top;
     object-fit: cover;
     aspect-ratio: 1 / 1;
-    max-height: 400px;
+    height: 400px;
+    flex-shrink: 0;
     @media (width >= 48rem) { 
         width: 30%;
     }
