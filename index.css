@@ -17,7 +17,20 @@ html {
     top: 0;
     z-index: 0;
     object-position: 100%;
-    max-height: 92vh;
+    max-height: calc(92vh);
+}
+
+.campaign-update-image {
+    height: 100%;
+    max-height: 700px;
+    min-width: 100%;
+    object-position: 0% 25%;
+    object-fit: cover;
+    aspect-ratio: 3 / 2;
+
+    @media (width < 48rem) {
+        height: inherit;
+    }
 }
 
 .header-gradient-white {
